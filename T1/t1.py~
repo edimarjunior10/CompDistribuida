@@ -1,5 +1,7 @@
 #T1 - Comp Distribuída - Edimar Roque Martello Júnior - 1111100038
 from bottle import run, get, post, request, redirect # or route
+from datetime import datetime
+datahora = datetime.now()
 #mensagens = []
 #nomes = []
 NomesMenssagens=[]
@@ -15,7 +17,7 @@ def login():
     '''
     #for i in nomes:form+=i[i]+": "
     #for i in mensagens:form+=i[i]+"<br>"
-    for i in NomesMenssagens:form+="User "i[0]+" says "+i[1]+"<br>"
+    for i in NomesMenssagens:form+=str(datahora)+"User "+i[0]+" says "+i[1]+"<br>"
     return form
     
 @post('/send') # or @route('/login', method='POST')
