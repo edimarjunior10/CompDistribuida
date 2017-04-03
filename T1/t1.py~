@@ -15,7 +15,7 @@ def login():
     '''
     #for i in nomes:form+=i[i]+": "
     #for i in mensagens:form+=i[i]+"<br>"
-    for i in NomesMenssagens:form+="User "+i[0]+" says "+i[1]+"<br>"
+    for i in NomesMenssagens:form+="User "i[0]+" says "+i[1]+"<br>"
     return form
     
 @post('/send') # or @route('/login', method='POST')
